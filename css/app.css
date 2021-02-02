@@ -7,7 +7,8 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-body, html {
+body,
+html {
     height: 100%;
     width: 100%;
     padding: 0;
@@ -28,7 +29,7 @@ button {
     font-family: Roboto, sans-serif;
 }
 h2 {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 48px;
     line-height: 56px;
     font-style: normal;
@@ -50,7 +51,8 @@ h3 {
     display: -ms-flexbox;
     display: flex;
 }
-.call-me, .header {
+.call-me,
+.header {
     background: #2b4074;
 }
 .container-header {
@@ -74,19 +76,20 @@ h3 {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background: url(images/dest/firstSlide.jpg);
+    background: url(../images/dest/firstSlide.jpg);
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: 400;
     position: relative;
 }
 .first-slider-external {
     display: block;
     margin: 0 auto;
-    background: rgba(33, 33, 33, .5);
+    background: rgba(33, 33, 33, 0.5);
     width: 100%;
-    height: 100%}
+    height: 100%;
+}
 .first-slider-content {
     padding: 107px 0;
     max-width: 50vw;
@@ -208,9 +211,9 @@ h1.first-slider-title {
 .service-items {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (255px)[2];
+    -ms-grid-rows: (255px) [2];
     grid-template-rows: repeat(2, 255px);
-    -ms-grid-columns: (212px)[4];
+    -ms-grid-columns: (212px) [4];
     grid-template-columns: repeat(4, 212px);
 }
 h2.service-description-title {
@@ -265,7 +268,7 @@ h4.service-description-subtitle {
     margin-bottom: 25px;
 }
 .service-items-text {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 16px;
