@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap')
+$backColor: #2B4074
+$contrastColor: #F9F6E5
+$textColor: #4A4A4A
+
+@mixin mgn-pdg
+  padding: 0
+  margin: 0  
+@mixin main-font
+  font-family: 'Roboto', sans-serif
+  font-style: normal
+  font-weight: 400
+@mixin h1-font
+  margin: 0
+  font-size: 96px
+  line-height: 96px  
+  font-weight: 400
+  letter-spacing: 2px
+@mixin h2-font
+  font-size: 48px
+  line-height: 56px
+  font-family: 'Roboto Condensed', sans-serif
+@mixin h3-font
+  font-family: 'Roboto', sans-serif
+  font-size: 24px
+  line-height: 32px
+  font-style: normal
+  font-weight: 500
+@mixin text-current-18
+  font-size: 18px
+  line-height: 24px
+  font-weight: 400
+  font-style: normal
+@mixin text-current-16
+  font-style: normal
+  font-size: 16px
+  line-height: 19px  
+@mixin centered-between
+  display: flex
+  justify-content: space-between
+  align-items: center
+@mixin centered-center
+  display: flex
+  justify-content: center
+  align-items: center  
+@mixin size-100
+  width: 100%
+  height: 100%
+@mixin border-radius-3
+  border-radius: 3px
+@mixin border-radius-4
+  border-radius: 4px
+@mixin h4-font
+  font-style: normal
+  font-weight: 400
+*
+  box-sizing: border-box
+
+html, body
+  height: 100%
+  width: 100%
+  @include mgn-pdg
+  display: table
+  @include main-font
+  overflow-x: hidden
+  color: white
+button
+  width: 200px
+  height: 50px
+  @include text-current-18
+  @include border-radius-3
+  border: none
+  font-family: 'Roboto', sans-serif 
+  cursor: pointer
+  &hover
+    border: none
+h2
+  @include main-font  
+  @include h2-font  
+
+h3
+  @include mgn-pdg
+  @include h3-font  
+
+.container
+  width: 1140px
+  margin: 0 auto
+  display: flex
+.header, .call-me
+  background: $backColor
+.header__inner
+  display: flex
+  width: 1320px
+  @include centered-between
+  padding: 17px 0
+  margin: 0 -90px
+.header-menu-button
+  padding-right: 94px
+  cursor: pointer
+
+.first-slider 
+  justify-content: center  
+  background: url('../images/dest/firstSlide.jpg')
+  background-size: cover
+  background-attachment: fixed
+  font-family: 'Roboto Condensed', sans-serif
+  font-weight: 400
+  position: relative  
+.first-slider-external 
+  display: block
+  margin: 0 auto
+  background: rgba(33, 33, 33, 0.5)
+  @include size-100
+.first-slider-content 
+  padding: 107px 0
+  max-width: 50vw
+  margin: 0 auto
+  text-align: center
+h1.first-slider-title
+  @include h1-font  
+  margin-bottom: 18px
+.first-slider-text
+  font-size: 24px
+  line-height: 26px  
+  margin-bottom: 28px
+.first-slider-button, .team-text-button
+  background: $backColor
+  color: white
+  &:hover
+    cursor: pointer
+.first-slider-markers
+  @include centered-center    
+  padding-top: 10px
+  padding-bottom: 80px
+.first-slider-markers__circle
+  border-radius: 50%
+  border-color: white
+  background: white
+  width: 10px
+  height: 10px
+  border: 1px
+  border-style: solid
+  margin-right: 10px
+  &:hover
+    cursor: pointer
+.first-slider-markers__circle:nth-child(2)
+  background: none
+.first-slider-arrows
+  position: absolute
+  top: calc(50% - 70px)
+  left: calc(100% - 70px)
+.first-slider-arrow
+  width: 70px
+  height: 70px
+  background: $backColor
+  color: white
+  @include centered-center
+  font-size: 24px
+  font-weight: bold
+  &:hover
+    color:#929292
+    background: $contrastColor
+
+.call-me__inner
+  @include centered-between
+  padding: 57px 0
+  @include size-100
+
+.call-me-text__description
+  font-family: 'Dosis', sans-serif
+  font-weight: 300
+  font-style: normal
+  @include text-current-16
+
+.call-me-button
+  font-weight: 500
+  color: $backColor
+
+.service
+  color: $backColor
+
+.service__inner
+  @include centered-between
+  padding: 18px 0
+  margin: 0 -90px
+
+.service-items
+  display: grid
+  grid-template-rows: repeat(2, 255px)
+  grid-template-columns: repeat(4, 212px)
+
+h2.service-description-title
+  padding: 0 0 64px 0
+  margin: 0
+h4.service-description-subtitle
+  color: $textColor
+  font-size: 24px
+  line-height: 26px
+  @include h4-font  
+  margin: 0
+
+.service-description-text, .team-text-text
+  color: #797979
+  @include text-current-18
+  @include mgn-pdg
+
+hr.service-description-line, hr.projects-line, hr.team-text-line,  hr.news-line
+  margin: 35px 0
+  background: $backColor
+  width: 100px
+  height: 8px
+
+.service-items
+  padding-left: 60px
+
+.service-items__item
+  @include centered-center
+  flex-direction: column
+  text-align: center
+  border: 5px solid transparent
+
+.service-items-img
+  width: 64px
+  height: 64px
+  margin-bottom: 25px
+
+.service-items-text
+  font-family: 'Roboto Condensed', sans-serif
+  font-weight: 700
+  font-style: normal
+  @include text-current-16
+  color: $textColor
+  @include mgn-pdg
+
+.service-items__item-hidden
+  display: none
+.service-items-hidden-text
+  @include centered-between
+  font-weight: 500
+  @include text-current-16
+  color: #9B9B9B
+
+.service-items-hidden-link, .projects-item-subtitle, .news-text
+  text-decoration: none
+  font-style: normal
+  font-family: 'Roboto Condensed', serif
+  font-weight: 700
+  @include text-current-16
+  color: $backColor
+
+.service-items__item
+  &:hover
+    cursor: pointer
+    border: 5px solid $backColor
+  &:hover .service-items__item-hidden
+    display: block
+
+.projects
+  background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%)
+.projects__inner
+  @include centered-center
+  flex-direction: column
+  @include size-100
+  @include mgn-pdg
+
+.projects-items
+  @include centered-center
+  padding-bottom: 100px
+  
+.projects-title
+  padding-top: 80px
+  margin: 0
+.projects-items__item  
+  @include centered-center
+  flex-direction: column
+  padding: 0 12px
+  flex-wrap: wrap
+.projects-item-subtitle
+  letter-spacing: 2px
+.projects-item-img
+  position: relative
+  margin-bottom: 20px
+  &:hover
+    cursor: pointer
+  &:hover .projects-item-hidden
+    display: flex
+
+.projects-item-img img
+  @include border-radius-4
+hr.projects-line
+  background: white
+  margin: 0
+  margin-top: 24px
+  margin-bottom: 80px
+
+.projects-item-hidden
+  @include centered-center
+  display: none
+  position: absolute
+  width: 90%
+  height: 90%
+  background: rgba(255, 255, 255, 0.7)
+  top: 5%
+  left: 5%
+  @include border-radius-4
+
+.projects-item-hidden__info
+  width: 28px
+  height: 28px 
+  margin-right: 10px
+
+.projects-item-hidden__link__search
+  width: 32px
+  height: 32px
+  margin-top: 4px
+  margin-left: 10px
+
+.team__inner
+  display: flex
+  padding-top: 10px
+  padding-bottom: 80px
+.team-text
+  display: flex
+  justify-content: space-between
+  flex-direction: column  
+  text-align: left
+.team-image
+  padding-right: 90px
+.team-image-img
+  @include border-radius-4
+  height: 100%  
+h2.team-text-title, h2.news-title
+  color: $textColor
+  @include mgn-pdg
+.team-text-text
+  color: #9B9B9B
+hr.team-text-line
+  @include mgn-pdg
+.team-text-button
+  @include mgn-pdg
+
+.news
+  background: #F9F6E5
+.news__inner
+  @include mgn-pdg
+  @include size-100
+  @include centered-center
+  flex-direction: column
+  padding-bottom: 64px
+h2.news-title
+  padding-top: 52px
+hr.news-line
+  margin: 20px 0
+
+.news__images,  
+  @include mgn-pdg
+  @include size-100
+  padding-top: 55px
+  display: flex
+  columns: 4
+
+.grid-sizer, .grid-item
+  width: 25%
+.grid-item
+  padding-top: 16px
+  padding-bottom: 16px
+
+.grid-item:nth-child(2), .grid-item:nth-child(6)
+  padding-left: 0px
+  padding-right: 24px
+.grid-item:nth-child(5), .grid-item:nth-child(9)
+  padding-left: 24px
+  padding-right: 0px
+.grid-item:nth-child(3), .grid-item:nth-child(7)
+  padding-left: 8px
+  padding-right: 16px
+.grid-item:nth-child(4), .grid-item:nth-child(8)
+  padding-left: 16px
+  padding-right: 8px
+  
+.news-img
+  @include centered-center
+  flex-direction: column
+  position: relative
+  outline: 10px solid rgba(255,255,255,0)
+  outline-offset: -8px
+  color: white
+  &:hover
+    cursor: pointer 
+    @include border-radius-4
+    outline: 8px solid $backColor
+
+  &:hover .news-background   
+    background: rgba(43, 64, 116, 0.3)
+  &:hover .news-text
+    background: $backColor
+    color: white
+    top: calc(100% - 70px)
+  &:hover .news-link
+    display: flex
+ 
+.news-img-img
+  @include mgn-pdg
+  @include size-100
+  @include border-radius-4
+
+.news-background   
+  position: absolute
+  top: 0
+  left: 0
+  @include mgn-pdg
+  @include size-100
+  background:  rgba(43, 64, 116, 0)
+
+.news-text
+  position: absolute
+  text-align: center
+  @include mgn-pdg
+  height: 40px
+  width: 100%
+  background: white
+  top: calc(100% - 40px)
+  left: 0
+  color: $backColor
+  padding: 10px 0
+  letter-spacing: 2px
+
+.news-link
+  position: absolute
+  text-align: 
+  top: calc(50% - 28px)
+  left: calc(50% - 14px)
+  width: 28px
+  height: 28px
+  display: none
+.new-search-icon
+  @include mgn-pdg
+  @include size-100  
+
+.reviewes__inner
+  @include mgn-pdg
+  @include size-100  
+  color: $backColor  
+  @include centered-center
+  flex-direction: column
+  padding-bottom: 120px
+
+.owl-carousel  
+  @include centered-center
+  flex-direction: column
+  text-align: center
+.fa-quote-right
+  padding-top: 100px
+  font-size: 34px  
+
+h4.reviewes-text
+  @include mgn-pdg
+  font-family: 'Roboto Condensed', sans-serif
+  @include h4-font
+  font-size: 36px
+  line-height: 42px
+  display: block
+  padding-top: 50px
+  padding-bottom: 44px
+  color: $textColor
+span
+  color: $backColor
+q.reviewes-quote
+  quotes: none
+
+.reviewes-author
+  @include mgn-pdg
+  @include h3-font
+  font-weight: 700
+  font-family: 'Roboto Condensed', sans-serif
+  color: $textColor
+
+.owl-controls
+  padding-top: 60px  
+.owl-page span
+  background: $backColor!important
+  
+.owl-page.active span
+  background: white!important
+  border: 2px solid $backColor
+
+.footer
+  position: relative
+  background: $backColor
+.footer-logo
+  position: absolute
+  @include centered-center
+  height: 60px
+  width: 230px
+  @include mgn-pdg
+  left: calc(50% - 115px)
+  top: -30px
+  background: $backColor
+  @include border-radius-3
+.footer-logo img
+  width: 83px
+  height: 55px
+
+.footer__inner
+  @include mgn-pdg
+  @include size-100
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  padding-top: 158px
+  padding-bottom: 97px
+h4.footer-title
+  @include mgn-pdg
+  font-family: 'Roboto', sans-serif
+  @include h4-font  
+  font-size: 24px
+  line-height: 32px
+  letter-spacing: 2px
+  padding-bottom: 80px
+.footer-social
+  @include mgn-pdg
+  @include size-100
+  @include centered-center
+  padding-bottom: 60px
+.footer-link
+  @include mgn-pdg
+  width: 25%
+  @include centered-center 
+  text-decoration: none
+  color: white
+  border: 1px solid #7EBF84
+  border-right: none
+  @include h4-font
+  font-size: 20px
+  line-height: 14px
+  padding: 24px 127px
+  &:hover
+    color: $backColor
+    background: white
+    border-color: white
+.footer-link:first-child
+  border-left: none  
+
+.footer-submenu
+  @include mgn-pdg
+  display: flex
+  justify-content: flex-start
+.footer-submenu-title
+  @include text-current-16
+  font-family: 'Roboto Condensed', serif
+  letter-spacing: 2px
+
+.footer-submenu__item
+  @include mgn-pdg
+  width: 25%
+.footer-submenu ul
+  @include mgn-pdg
+.footer-submenu li
+  list-style-type: none
+  text-align: left
+  padding-bottom: 3px
+  
+.footer-submenu li a, .footer-submenu a
+  text-align: left
+  color: white
+  text-decoration: none
+  @include h4-font
+  font-family: 'Roboto', serif
+  font-size: 12px
+
+.finish
+  @include mgn-pdg
+  height: 42px  
+.finish__inner
+  @include centered-center
+  width: 100%
+  justify-content: flex-end
+.finish-link
+  color: $textColor
+  @include centered-center
+  @include mgn-pdg
+  @include h4-font
+  @include text-current-16
+  padding-top: 12px
+  letter-spacing: 2px
+  font-family: 'Roboto Condensed', serif
+  text-decoration: none
+  &:hover
+    color: $backColor
+  &:hover .finish-text
+    font-weight: 700
+h4.finish-text
+  @include mgn-pdg
+  font-weight: 400
+  padding-right: 16px
+.fa-chevron-up
+  @include mgn-pdg
+  font-size: 22px
+  font-weight: 900
+
+.scroll-top 
+  bottom: 10px
+  right: 20px
+  position: fixed
+  height: 30px
+  width: 30px
+  background-color: $textColor
+  color: white
+  line-height: 30px
+  text-align: center
+  display: none
+  z-index: 9999
+  -webkit-transition: height 0.5s ease-in 0s
+  -moz-transition: height 0.5s ease-in 0s
+  -o-transition: height 0.5s ease-in 0s
+  transition: height 0.5s ease-in 0s
+  &:hover
+    color: $backColor
+    background: white
