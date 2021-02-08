@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  //--Use "Masonry" for break grid with images
   let $grid = $(".grid").masonry({
     columnWidth: ".grid-sizer",
     itemSelector: ".grid-item",
@@ -9,6 +8,8 @@ $(document).ready(function () {
   //--reviewes section use the "Owl Carousel"
   $(".owl-carousel").owlCarousel({
     items: 1,
+    center: true,
+    singleItem: true
   });
 
   //----slow scroll-----
@@ -23,7 +24,6 @@ $(document).ready(function () {
 
   //scroll to top
   $(function () {
-    //find size of document
     let winHeight = document.documentElement.clientHeight;
     let scrollHeight = Math.max(
       document.body.scrollHeight,
@@ -34,7 +34,6 @@ $(document).ready(function () {
       document.documentElement.clientHeight
     );
     scrollHeight = scrollHeight - 30 - winHeight;
-    //Show top-button when scroll more than the first window and less than bottom
     $(window).on("scroll", function (event) {
       if ($(this).scrollTop() != 0 && $(this).scrollTop() < scrollHeight) {
         $("#topNubex").fadeIn();
@@ -42,7 +41,7 @@ $(document).ready(function () {
         $("#topNubex").fadeOut();
       }
     });
-    //slow back
+
     $("#topNubex").on("click", function (event) {
       $("body,html").animate({ scrollTop: 0 }, 700);
     });

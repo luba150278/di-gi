@@ -106,7 +106,9 @@ h3
   justify-content: center  
   background: url('../images/dest/firstSlide.jpg')
   background-size: cover
-  background-attachment: fixed
+  background-repeat: no-repeat
+  background-position: center
+  /*background-attachment: fixed*/
   font-family: 'Roboto Condensed', sans-serif
   font-weight: 400
   position: relative  
@@ -187,11 +189,13 @@ h1.first-slider-title
   @include centered-between
   padding: 18px 0
   margin: 0 -90px
+  
 
 .service-items
   display: grid
   grid-template-rows: repeat(2, 255px)
   grid-template-columns: repeat(4, 212px)
+  padding-left: 60px
 
 h2.service-description-title
   padding: 0 0 64px 0
@@ -213,9 +217,6 @@ hr.service-description-line, hr.projects-line, hr.team-text-line,  hr.news-line
   background: $backColor
   width: 100px
   height: 8px
-
-.service-items
-  padding-left: 60px
 
 .service-items__item
   @include centered-center
@@ -255,7 +256,7 @@ hr.service-description-line, hr.projects-line, hr.team-text-line,  hr.news-line
 .service-items__item
   &:hover
     cursor: pointer
-    border: 5px solid $backColor
+    border: 4px solid $backColor
   &:hover .service-items__item-hidden
     display: block
 
@@ -265,11 +266,12 @@ hr.service-description-line, hr.projects-line, hr.team-text-line,  hr.news-line
   @include centered-center
   flex-direction: column
   @include size-100
-  @include mgn-pdg
+  @include mgn-pdg  
 
 .projects-items
   @include centered-center
   padding-bottom: 100px
+  
   
 .projects-title
   padding-top: 80px
@@ -277,13 +279,16 @@ hr.service-description-line, hr.projects-line, hr.team-text-line,  hr.news-line
 .projects-items__item  
   @include centered-center
   flex-direction: column
-  padding: 0 12px
+  padding: 0 20px 0px 0px
   flex-wrap: wrap
+.projects-items__item:last-child
+    padding: 0
 .projects-item-subtitle
   letter-spacing: 2px
 .projects-item-img
   position: relative
   margin-bottom: 20px
+  width: 100%
   &:hover
     cursor: pointer
   &:hover .projects-item-hidden
@@ -291,6 +296,7 @@ hr.service-description-line, hr.projects-line, hr.team-text-line,  hr.news-line
 
 .projects-item-img img
   @include border-radius-4
+  width: 100%
 hr.projects-line
   background: white
   margin: 0
@@ -321,7 +327,7 @@ hr.projects-line
 
 .team__inner
   display: flex
-  padding-top: 10px
+  padding-top: 40px
   padding-bottom: 80px
 .team-text
   display: flex
@@ -356,12 +362,12 @@ h2.news-title
 hr.news-line
   margin: 20px 0
 
-.news__images,  
+.news__images
   @include mgn-pdg
   @include size-100
   padding-top: 55px
   display: flex
-  columns: 4
+  
 
 .grid-sizer, .grid-item
   width: 25%
@@ -431,7 +437,6 @@ hr.news-line
 
 .news-link
   position: absolute
-  text-align: 
   top: calc(50% - 28px)
   left: calc(50% - 14px)
   width: 28px
@@ -450,9 +455,11 @@ hr.news-line
   padding-bottom: 120px
 
 .owl-carousel  
-  @include centered-center
-  flex-direction: column
+  
+  /*flex-direction: column*/
   text-align: center
+.owl-item
+  width: 100%
 .fa-quote-right
   padding-top: 100px
   font-size: 34px  
@@ -571,6 +578,8 @@ h4.footer-title
   @include h4-font
   font-family: 'Roboto', serif
   font-size: 12px
+  &:hover
+    text-decoration: underline
 
 .finish
   @include mgn-pdg
@@ -621,3 +630,68 @@ h4.finish-text
   &:hover
     color: $backColor
     background: white
+
+@media (max-width: 1024px)
+  .container
+    width: 90vw
+
+  .header__inner
+    margin: 0
+  .header-menu-button
+    padding-right: 0
+
+  h1
+    font-size: 84px
+    line-height: 84px
+  .first-slider-content 
+    max-width: 60vw
+  .first-slider-text
+    @include text-current-18
+    line-height: 20px
+    max-width: 90%
+
+  .service__inner
+    margin: 0
+    padding: 52px 0 30px 0
+    flex-wrap: wrap
+    justify-content: center
+
+  .service-items
+    padding: 30px 0 0 0
+
+  .service-description-title
+    text-align: center
+
+  .projects__inner
+    padding: 0 120px
+  .projects-items
+    flex-wrap: wrap
+  .projects-items__item, .projects-items__item:last-child
+    width: 50%
+    padding: 0 14px
+  
+  .projects-item-subtitle
+    @include mgn-pdg
+    padding: 10px 0px 30px 0
+
+  .news__images
+    max-width: 85vw
+    justify-content: center
+  .grid-sizer, .grid-item
+    width: 33%
+  .grid-item:nth-child(2), .grid-item:nth-child(5), .grid-item:nth-child(8)
+    padding-left: 0px
+    padding-right: 24px
+  .grid-item:nth-child(4), .grid-item:nth-child(7)
+    padding-left: 24px
+    padding-right: 0px
+  .grid-item:nth-child(3), .grid-item:nth-child(6), .grid-item:nth-child(9)
+    padding-left: 8px
+    padding-right: 16px 
+
+@media (max-width: 768px)
+  .service-items
+    grid-template-rows: repeat(4, 228px)
+    grid-template-columns: repeat(2, 331px)
+  .grid-sizer, .grid-item
+    width: 50%
