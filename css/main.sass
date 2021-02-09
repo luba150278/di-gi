@@ -9,7 +9,7 @@ $textColor: #4A4A4A
 
 @mixin mgn-pdg
   padding: 0
-  margin: 0  
+  margin: 0
 @mixin main-font
   font-family: 'Roboto', sans-serif
   font-style: normal
@@ -17,7 +17,7 @@ $textColor: #4A4A4A
 @mixin h1-font
   margin: 0
   font-size: 96px
-  line-height: 96px  
+  line-height: 96px
   font-weight: 400
   letter-spacing: 2px
 @mixin h2-font
@@ -38,7 +38,7 @@ $textColor: #4A4A4A
 @mixin text-current-16
   font-style: normal
   font-size: 16px
-  line-height: 19px  
+  line-height: 19px
 @mixin centered-between
   display: flex
   justify-content: space-between
@@ -46,7 +46,7 @@ $textColor: #4A4A4A
 @mixin centered-center
   display: flex
   justify-content: center
-  align-items: center  
+  align-items: center
 @mixin size-100
   width: 100%
   height: 100%
@@ -74,17 +74,17 @@ button
   @include text-current-18
   @include border-radius-3
   border: none
-  font-family: 'Roboto', sans-serif 
+  font-family: 'Roboto', sans-serif
   cursor: pointer
   &hover
     border: none
 h2
-  @include main-font  
-  @include h2-font  
+  @include main-font
+  @include h2-font
 
 h3
   @include mgn-pdg
-  @include h3-font  
+  @include h3-font
 
 .container
   width: 1140px
@@ -102,8 +102,8 @@ h3
   padding-right: 94px
   cursor: pointer
 
-.first-slider 
-  justify-content: center  
+.first-slider
+  justify-content: center
   background: url('../images/dest/firstSlide.jpg')
   background-size: cover
   background-repeat: no-repeat
@@ -111,23 +111,24 @@ h3
   /*background-attachment: fixed*/
   font-family: 'Roboto Condensed', sans-serif
   font-weight: 400
-  position: relative  
-.first-slider-external 
+  position: relative
+.first-slider-external
   display: block
   margin: 0 auto
   background: rgba(33, 33, 33, 0.5)
   @include size-100
-.first-slider-content 
-  padding: 107px 0
-  max-width: 50vw
+.first-slider-content
+  padding: 107px 0 0 0
+  max-width: 60vw
   margin: 0 auto
   text-align: center
 h1.first-slider-title
-  @include h1-font  
+  @include h1-font
   margin-bottom: 18px
+  padding: 0 25%
 .first-slider-text
   font-size: 24px
-  line-height: 26px  
+  line-height: 26px
   margin-bottom: 28px
 .first-slider-button, .team-text-button
   background: $backColor
@@ -135,8 +136,8 @@ h1.first-slider-title
   &:hover
     cursor: pointer
 .first-slider-markers
-  @include centered-center    
-  padding-top: 10px
+  @include centered-center
+  padding-top: 124px
   padding-bottom: 80px
 .first-slider-markers__circle
   border-radius: 50%
@@ -164,12 +165,12 @@ h1.first-slider-title
   font-size: 24px
   font-weight: bold
   &:hover
-    color:#929292
+    color: #929292
     background: $contrastColor
 
 .call-me__inner
   @include centered-between
-  padding: 57px 0
+  padding: 45px 0
   @include size-100
 
 .call-me-text__description
@@ -189,7 +190,6 @@ h1.first-slider-title
   @include centered-between
   padding: 18px 0
   margin: 0 -90px
-  
 
 .service-items
   display: grid
@@ -204,7 +204,7 @@ h4.service-description-subtitle
   color: $textColor
   font-size: 24px
   line-height: 26px
-  @include h4-font  
+  @include h4-font
   margin: 0
 
 .service-description-text, .team-text-text
@@ -266,23 +266,22 @@ hr.service-description-line, hr.projects-line, hr.team-text-line,  hr.news-line
   @include centered-center
   flex-direction: column
   @include size-100
-  @include mgn-pdg  
+  @include mgn-pdg
 
 .projects-items
   @include centered-center
   padding-bottom: 100px
-  
-  
+
 .projects-title
   padding-top: 80px
   margin: 0
-.projects-items__item  
+.projects-items__item
   @include centered-center
   flex-direction: column
   padding: 0 20px 0px 0px
   flex-wrap: wrap
 .projects-items__item:last-child
-    padding: 0
+  padding: 0
 .projects-item-subtitle
   letter-spacing: 2px
 .projects-item-img
@@ -316,7 +315,7 @@ hr.projects-line
 
 .projects-item-hidden__info
   width: 28px
-  height: 28px 
+  height: 28px
   margin-right: 10px
 
 .projects-item-hidden__link__search
@@ -332,13 +331,13 @@ hr.projects-line
 .team-text
   display: flex
   justify-content: space-between
-  flex-direction: column  
+  flex-direction: column
   text-align: left
 .team-image
   padding-right: 90px
 .team-image-img
   @include border-radius-4
-  height: 100%  
+  height: 100%
 h2.team-text-title, h2.news-title
   color: $textColor
   @include mgn-pdg
@@ -358,16 +357,15 @@ hr.team-text-line
   flex-direction: column
   padding-bottom: 64px
 h2.news-title
-  padding-top: 52px
+  padding-top: 72px
 hr.news-line
   margin: 20px 0
 
 .news__images
   @include mgn-pdg
   @include size-100
-  padding-top: 55px
+  padding-top: 75px
   display: flex
-  
 
 .grid-sizer, .grid-item
   width: 25%
@@ -387,7 +385,7 @@ hr.news-line
 .grid-item:nth-child(4), .grid-item:nth-child(8)
   padding-left: 16px
   padding-right: 8px
-  
+
 .news-img
   @include centered-center
   flex-direction: column
@@ -396,11 +394,11 @@ hr.news-line
   outline-offset: -8px
   color: white
   &:hover
-    cursor: pointer 
+    cursor: pointer
     @include border-radius-4
     outline: 8px solid $backColor
 
-  &:hover .news-background   
+  &:hover .news-background
     background: rgba(43, 64, 116, 0.3)
   &:hover .news-text
     background: $backColor
@@ -408,19 +406,19 @@ hr.news-line
     top: calc(100% - 70px)
   &:hover .news-link
     display: flex
- 
+
 .news-img-img
   @include mgn-pdg
   @include size-100
   @include border-radius-4
 
-.news-background   
+.news-background
   position: absolute
   top: 0
   left: 0
   @include mgn-pdg
   @include size-100
-  background:  rgba(43, 64, 116, 0)
+  background: rgba(43, 64, 116, 0)
 
 .news-text
   position: absolute
@@ -444,25 +442,25 @@ hr.news-line
   display: none
 .new-search-icon
   @include mgn-pdg
-  @include size-100  
+  @include size-100
 
 .reviewes__inner
   @include mgn-pdg
-  @include size-100  
-  color: $backColor  
+  @include size-100
+  color: $backColor
   @include centered-center
   flex-direction: column
-  padding-bottom: 120px
+  padding-bottom: 90px
 
-.owl-carousel  
-  
+.owl-carousel
+
   /*flex-direction: column*/
   text-align: center
 .owl-item
   width: 100%
 .fa-quote-right
   padding-top: 100px
-  font-size: 34px  
+  font-size: 34px
 
 h4.reviewes-text
   @include mgn-pdg
@@ -487,10 +485,10 @@ q.reviewes-quote
   color: $textColor
 
 .owl-controls
-  padding-top: 60px  
+  padding-top: 60px
 .owl-page span
   background: $backColor!important
-  
+
 .owl-page.active span
   background: white!important
   border: 2px solid $backColor
@@ -519,11 +517,11 @@ q.reviewes-quote
   flex-direction: column
   justify-content: flex-start
   padding-top: 158px
-  padding-bottom: 97px
+  padding-bottom: 90px
 h4.footer-title
   @include mgn-pdg
   font-family: 'Roboto', sans-serif
-  @include h4-font  
+  @include h4-font
   font-size: 24px
   line-height: 32px
   letter-spacing: 2px
@@ -536,7 +534,7 @@ h4.footer-title
 .footer-link
   @include mgn-pdg
   width: 25%
-  @include centered-center 
+  @include centered-center
   text-decoration: none
   color: white
   border: 1px solid #7EBF84
@@ -550,12 +548,13 @@ h4.footer-title
     background: white
     border-color: white
 .footer-link:first-child
-  border-left: none  
+  border-left: none
 
 .footer-submenu
   @include mgn-pdg
   display: flex
   justify-content: flex-start
+  flex-wrap: wrap
 .footer-submenu-title
   @include text-current-16
   font-family: 'Roboto Condensed', serif
@@ -570,7 +569,7 @@ h4.footer-title
   list-style-type: none
   text-align: left
   padding-bottom: 3px
-  
+
 .footer-submenu li a, .footer-submenu a
   text-align: left
   color: white
@@ -583,7 +582,7 @@ h4.footer-title
 
 .finish
   @include mgn-pdg
-  height: 42px  
+  height: 42px
 .finish__inner
   @include centered-center
   width: 100%
@@ -611,7 +610,7 @@ h4.finish-text
   font-size: 22px
   font-weight: 900
 
-.scroll-top 
+.scroll-top
   bottom: 10px
   right: 20px
   position: fixed
@@ -640,36 +639,57 @@ h4.finish-text
   .header-menu-button
     padding-right: 0
 
-  h1
+  h1.first-slider-title 
     font-size: 84px
     line-height: 84px
-  .first-slider-content 
+  .first-slider-content
     max-width: 60vw
   .first-slider-text
     @include text-current-18
     line-height: 20px
     max-width: 90%
-
+  .call-me__inner
+    padding: 35px 0
+  .call-me-text__title    
+    @include text-current-18
+    line-height: 18px
+    font-weight: 500
+    padding-bottom: 12px
+  .call-me-text__description
+    font-size: 14px
+    line-height: 16px
   .service__inner
     margin: 0
-    padding: 52px 0 30px 0
+    padding: 52px 0 40px 0
     flex-wrap: wrap
     justify-content: center
 
   .service-items
-    padding: 30px 0 0 0
+    grid-template-columns: repeat(4, 1fr)
+    padding: 40px 0 0 0
 
   .service-description-title
     text-align: center
+  .service-description-text
+    padding-right: 27vw
+
+  .team-image
+    padding-right: 60px
+    height: 380px
+  .team-image-img
+    height: 100%
+    width: 395px
+  .team__inner
+    padding-top: 80px
 
   .projects__inner
     padding: 0 120px
   .projects-items
     flex-wrap: wrap
+    padding-bottom: 60px
   .projects-items__item, .projects-items__item:last-child
     width: 50%
     padding: 0 14px
-  
   .projects-item-subtitle
     @include mgn-pdg
     padding: 10px 0px 30px 0
@@ -687,11 +707,90 @@ h4.finish-text
     padding-right: 0px
   .grid-item:nth-child(3), .grid-item:nth-child(6), .grid-item:nth-child(9)
     padding-left: 8px
-    padding-right: 16px 
+    padding-right: 16px
+  .news-text
+    @include text-current-18
+
+  .reviewes__inner
+    padding-bottom: 106px
+  h4.reviewes-text
+    font-size: 32px
+    line-height: 38px
+  .reviewes-author
+    font-size: 20px
+    line-height: 24px
+  h4.footer-title
+    font-size: 32px
+  .footer-social
+    padding-bottom: 48px
+  .footer-submenu-title
+    @include text-current-18
+    font-weight: 700
 
 @media (max-width: 768px)
+  .first-slider-content
+    max-width: 80vw
+    padding: 87px 0 50px 0
+  h1.first-slider-title 
+    font-size: 60px
+    line-height: 60px
+    padding: 0 25%
+  .first-slider-text
+    padding: 6px 0
+  .first-slider-markers
+    padding: 0
+    padding-bottom: 50px
+
+  .call-me__inner
+    padding-bottom: 30px
+  .call-me-text__title    
+    font-size: 24px
+    line-height: 24px
+    font-weight: 500
+  .call-me-text__description
+    font-size: 16px
+    line-height: 18px
+    padding-right: 20%
   .service-items
-    grid-template-rows: repeat(4, 228px)
-    grid-template-columns: repeat(2, 331px)
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(4, 288px)
+  .service-items__item
+    padding: 20%
+
+  .news__inner
+    padding-bottom: 40px
+  .news__images
+    padding: 0
+    padding-top: 20px
+    max-width: 78vw
   .grid-sizer, .grid-item
     width: 50%
+  .grid-item:nth-child(even)
+    padding-left: 0px
+    padding-right: 16px
+  .grid-item:nth-child(odd)
+    padding-left: 16px
+    padding-right: 0px
+  .projects__inner
+    padding: 0 0px
+
+  .team__inner
+    padding: 46px 0
+  .team-image
+    height: 227px
+    padding-right: 30px
+  .team-image-img
+    width: 240px
+  .team-text-button
+    margin-left: calc(100px - 30%)
+    margin-top: 40px
+  hr.team-text-line
+    margin: 20px 0
+
+  .footer-link
+    padding: 20px 0px
+  .footer-submenu__item
+    width: 50%
+  .footer-submenu-title
+    @include text-current-18
+    font-weight: 700
