@@ -121,7 +121,8 @@ html, body
   @include main-font
   overflow-x: hidden
   color: $contrastColor
-
+  background: white
+  min-width: 320px
 button
   @include buttons-size
   @include text-current-18  
@@ -243,6 +244,7 @@ hr
 .service-description
   display: flex
   flex-wrap: wrap
+  width: 30%
 .service-description-title
   margin: 0 0 $minPad*6.5 0 
 .service-description-subtitle
@@ -253,9 +255,10 @@ hr
   @include text-current-18
   color: $lightText
 .service-items
+  width: 70%
   display: grid
   grid-template-rows: repeat(2, 255px)
-  grid-template-columns: repeat(4, 212px)
+  grid-template-columns: repeat(4, 1fr)
   padding-left: $minPad*6
 .service-items__item
   @include centered-center
@@ -615,10 +618,14 @@ q.reviewes-quote
     color: $backColor
     background: white
 
-@media (max-width: 1024px)
-
+@media (max-width: 1439px)
+  .service__inner
+    width: 100%
+    margin: 0
   .container
     width: 90vw
+
+@media (max-width: 1200px)
   .header__inner
     margin: 0
   .header-menu-button
@@ -654,13 +661,17 @@ q.reviewes-quote
     justify-content: center
   .service-description
     flex-direction: column
+    width: 100%
   .service-description-title
     text-align: center
   .service-description-text
     padding-right: 27vw
   .service-items
+    width: 100%
     grid-template-columns: repeat(4, 1fr)
     padding: $minPad*4 0 0 0
+  .service-items__item
+    padding: 10%
 
   .projects__inner
     padding: $minPad*8
@@ -690,6 +701,8 @@ q.reviewes-quote
     width: 395px
   .team-text-line
     margin: $minPad*2 0
+  .team-text-button
+    margin-top: 2%
 
   .news__images
     max-width: 85vw
@@ -874,12 +887,12 @@ q.reviewes-quote
     flex-direction: column
     padding-top: $minPad*5
   .team-image
-    height: 478px
+    height: 75vw
     padding: 0
     margin-bottom: $minPad*4
     text-align: center
   .team-image-img
-    width: 540px
+    width: 80vw
   .team-text
     justify-content: center
     align-items: center
