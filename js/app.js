@@ -5,11 +5,27 @@ $(document).ready(function () {
     horizontalOrder: true,
   });
 
+  //click on masonry for Safary
+  $(function () {
+    $(".news-item").on("click", function (event) {
+      let click_name = this.id
+      $(".news-item").each(function () {
+        let obs_name = this.id
+        let cn = '#' + obs_name + '>.news-img'
+        if (obs_name == click_name) {
+          $(cn).toggleClass('active')
+        } else {
+          $(cn).removeClass('active')
+        }
+      });
+    });
+  });
+
   //--reviewes section use the "Owl Carousel"
   $(".owl-carousel").owlCarousel({
     items: 1,
     center: true,
-    singleItem: true
+    singleItem: true,
   });
 
   //----slow scroll-----

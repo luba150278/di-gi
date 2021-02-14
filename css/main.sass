@@ -15,7 +15,7 @@ $newsPad: 8px
   width: $media
   height: $media
 @mixin arrowPos($media)
-  top: calc(50% - #{$media}) 
+  top: calc(50% - #{$media})
   left: calc(100% - #{$media})
 @mixin mgn-pdg
   padding: 0
@@ -30,7 +30,7 @@ $newsPad: 8px
   font-style: normal
   font-weight: 400
   @include mgn-pdg
-@mixin small-font  
+@mixin small-font
   font-family: 'Dosis', sans-serif
   font-weight: 300
   font-style: normal
@@ -45,7 +45,7 @@ $newsPad: 8px
 @mixin h2-font
   font-size: $h1Letter/2
   line-height: $h1Letter/1.7
-  @include title-font  
+  @include title-font
 @mixin h3-font
   @include main-font
   font-size: $h1Letter/4
@@ -124,7 +124,7 @@ html, body
 
 button
   @include buttons-size
-  @include text-current-18  
+  @include text-current-18
   @include border-radius-3
   border: none
   cursor: pointer
@@ -212,6 +212,7 @@ hr
   @include arrow($arrowButton)
   background: $backColor
   color: $contrastColor
+  border-radius: 0
   @include centered-center
   font-size: $h1Letter/4
   font-weight: bold
@@ -222,15 +223,16 @@ hr
 .call-me__inner
   @include centered-between
   padding: $minPad*5.5 0
-  @include size-100 
+  @include size-100
 .call-me-text__title
   margin-bottom: $minPad*1.5
-.call-me-text__description  
+.call-me-text__description
   @include text-current-16
   @include small-font
 .call-me-button
   color: $backColor
   font-weight: 500
+  background: $contrastColor
 
 .service
   color: $backColor
@@ -242,7 +244,7 @@ hr
   display: flex
   flex-wrap: wrap
 .service-description-title
-  margin: 0 0 $minPad*6.5 0 
+  margin: 0 0 $minPad*6.5 0
 .service-description-subtitle
   color: $textColor
   @include p-font
@@ -278,14 +280,14 @@ hr
 .service-items__item-hidden
   display: none
 .service-items-hidden-text
-  @include centered-between  
+  @include centered-between
   @include text-current-16
   @include main-font
   font-weight: 500
   color: $lightText
   margin-bottom: $minPad*2
 .service-items-hidden-link, .projects-item-subtitle, .news-text
-  text-decoration: none  
+  text-decoration: none
   @include text-current-16
   font-weight: 700
   color: $backColor
@@ -305,7 +307,7 @@ hr
   @include centered-between
 .projects-items__item
   @include centered-center
-  flex-direction: column  
+  flex-direction: column
   flex-wrap: wrap
 .projects-items__item ~.projects-items__item
   padding-left: $minPad*2
@@ -407,17 +409,17 @@ hr
   outline: $minPad solid rgba(255,255,255,0)
   outline-offset: -$newsPad
   color: $contrastColor
-  &:hover
+  &:hover, .active
     cursor: pointer
     @include border-radius-4
     outline: 8px solid $backColor
-  &:hover .news-background
+  &:hover .news-background, .active .news-background
     background: rgba(43, 64, 116, 0.3)
-  &:hover .news-text
+  &:hover .news-text, .active .news-text
     background: $backColor
     color: white
     top: calc(100% - #{$minPad*7})
-  &:hover .news-link
+  &:hover .news-link, .active .news-link
     display: flex
 .news-img-img
   @include mgn-pdg
@@ -468,7 +470,7 @@ hr
   font-size: 34px
   margin-bottom: $minPad*5
 .reviewes-text
-  @include quotes-font  
+  @include quotes-font
   color: $textColor
   margin-bottom: $minPad*3
 .reviewes-text span
@@ -518,7 +520,7 @@ q.reviewes-quote
   padding-right: 40%
   margin-bottom: $minPad*8
 .footer-social
-  @include mgn-pdg  
+  @include mgn-pdg
   @include size-100
   @include centered-center
   margin-bottom: $minPad*8
@@ -622,7 +624,7 @@ q.reviewes-quote
   .header-menu-button
     padding-right: 0
 
-  .first-slider-title 
+  .first-slider-title
     font-size: $h1Letter/1.14
     line-height: $h1Letter/1.14
   .first-slider-text
@@ -633,10 +635,10 @@ q.reviewes-quote
     @include arrowPos($arrowButton/1.25)
   .first-slider-arrow
     @include arrow($arrowButton/1.25)
-  
+
   .call-me__inner
     padding: $minPad*5 0
-  .call-me-text__title    
+  .call-me-text__title
     @include text-current-18
     line-height: 18px
     font-weight: 500
@@ -708,9 +710,9 @@ q.reviewes-quote
     font-weight: 700
     letter-spacing: 2px
     font-family: 'Roboto Condensed', sans-serif
-  .news-line   
+  .news-line
     margin-bottom: $minPad*8
-  
+
   .footer-title
     font-size: $h1Letter/2.67
     padding-right: 0
@@ -729,7 +731,7 @@ q.reviewes-quote
   .first-slider__inner
     width: 95%
     padding: $minPad*9 0 $minPad*5 0
-  .first-slider-title 
+  .first-slider-title
     font-size: $h1Letter/1.6
     line-height: $h1Letter/1.6
     padding: 0 15%
@@ -740,7 +742,7 @@ q.reviewes-quote
 
   .call-me__inner
     padding-bottom: $minPad*3
-  .call-me-text__title    
+  .call-me-text__title
     font-size: $h1Letter/4
     line-height: $h1Letter/4
     font-weight: 500
@@ -768,7 +770,7 @@ q.reviewes-quote
     font-weight: 700
     font-family: 'Roboto Condensed', sans-serif
     margin-bottom: $minPad*3
-   
+
   .team__inner
     padding: $minPad*5 0
   .team-image
@@ -796,7 +798,7 @@ q.reviewes-quote
     padding-right: $newsPad*2
   .grid-item:nth-child(odd)
     padding-left: $newsPad*2
-    padding-right: 0px   
+    padding-right: 0px
 
   .reviewes__inner
     padding: $minPad*6 0
@@ -875,6 +877,7 @@ q.reviewes-quote
     height: 478px
     padding: 0
     margin-bottom: $minPad*4
+    text-align: center
   .team-image-img
     width: 540px
   .team-text
@@ -893,7 +896,7 @@ q.reviewes-quote
     font-size: $h1Letter/4
     line-height: $h1Letter/3.7
 
-@media (max-width: 320px)
+@media (max-width: 480px)
   .service-description-title, .projects-title, .team-text-title, .news-title
     text-align: center
     white-space: nowrap
@@ -930,9 +933,9 @@ q.reviewes-quote
     padding: 0
 
   .team-image
-    height: 244px   
+    height: 76vw
   .team-image-img
-    width: 280px
+    width: 87vw
 
   .grid-sizer, .grid-item
     width: 100%
@@ -940,14 +943,14 @@ q.reviewes-quote
     padding: 0
   .grid-item:nth-child(odd), .grid-item:nth-child(even)
     padding-left: 0
-    padding-right: 0  
+    padding-right: 0
 
   .reviewes-text
     font-size: $h1Letter/4
     line-height: $h1Letter/3.7
 
   .footer__inner
-    padding-top: $minPad*8 
+    padding-top: $minPad*8
   .footer-title
     text-align: center
     font-size: $h1Letter/4.8
