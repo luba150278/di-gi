@@ -8,16 +8,16 @@ $(document).ready(function () {
   //click on masonry for Safary
   $(function () {
     $(".news-item").on("click", function (event) {
-      let click_name = this.id
+      let click_name = this.id      
       $(".news-item").each(function () {
         let obs_name = this.id
-        let cn = '#' + obs_name + '>.news-img'
-        if (obs_name == click_name) {
+        let cn='#'+obs_name+'>.news-img'
+        if (obs_name == click_name) {        
           $(cn).toggleClass('active')
-        } else {
+        }else{
           $(cn).removeClass('active')
         }
-      });
+      });     
     });
   });
 
