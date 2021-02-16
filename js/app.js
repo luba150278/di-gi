@@ -5,6 +5,8 @@ $(document).ready(function () {
     horizontalOrder: true,
   });
 
+
+
   //click on masonry for Safary
   $(function () {
     $(".news-item").on("click", function (event) {
@@ -26,6 +28,15 @@ $(document).ready(function () {
     items: 1,
     center: true,
     singleItem: true,
+    slideSpeed : 1000,
+    paginationSpeed : 1400,   
+  });
+
+  $(".arrow-next").on("click", function (event) {
+    $("#first-carousel").trigger('owl.next');
+  });
+  $(".arrow-prev").on("click", function (event) {
+    $("#first-carousel").trigger('owl.prev');
   });
 
   //----slow scroll-----
