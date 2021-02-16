@@ -336,6 +336,7 @@ hr {
   flex-direction: column;
   text-align: center;
   border: 5px solid transparent;
+  padding: 2%;
 }
 
 .service-items__item:hover {
